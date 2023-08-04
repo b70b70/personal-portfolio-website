@@ -1,0 +1,53 @@
+:root {
+    --darkcolour: #1a1c1d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* main logo / nav */
+nav {
+    background-color: var(--darkcolour);
+    padding: 1rem;
+    top: 0;
+    z-index: 100;
+    display:
+}
+
+.navbar {
+  width:100%;
+  padding: 1rem;
+  margin: 0;
+}
+
+.navbar-menu {
+  margin-bottom: 0.25rem;
+}
+
+.nav-bar-wrapper a{
+  align-items: right;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
