@@ -2,7 +2,27 @@
     --darkcolour: #1a1c1d;
     --blue: rgb(65, 165, 247);
     --body: #1a1a1a;
+    --rounded-md: .5rem;
+    --darkreader-bg--shadow: 0 .5rem 1rem rgba(0,0,0,.05);
+    --rounded: .25rem;
+    --darkreader-text--grey: #d3cfc9;
+    --dark-grey: #222;
+      }
+
+/* GLOBAL STYLES */
+
+.section-title {
+  padding-left: 1rem;
+  border-left: .5rem solid var(--blue);
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
 }
+.container {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
 
 * {
   box-sizing: border-box;
@@ -23,17 +43,30 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p,
+ {
   margin: 0;
-  font-weight:bold;
-  font-size: 50px;
+  padding: 0;
 }
 
-p {
-  margin: 0;
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
 }
 
-/* main logo / nav */
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* NAV */
+
   .navbar-logo img{
     width 50px;
   }
@@ -50,13 +83,12 @@ p {
   justify-content:space-between;
   align-items: center;
   padding: 10px 50px;
-  background-color: var(--darkcolour);
+  background-color: var(--dark-grey);
 }
 
 
 .navbar-menu {
   margin-bottom: 0.25rem;
-  
 }
 
 .nav-bar-wrapper a{
@@ -67,7 +99,6 @@ p {
 }
 
 nav ul {
-  list-style: none;
   display: flex;
   gap: 20px;
 }
@@ -84,7 +115,7 @@ nav a:hover {
   opacity: 0.8;
 }
 
-/* Hero*/
+/* HERO*/
 
 .hero-banner {
     display: flex;
@@ -96,13 +127,6 @@ nav a:hover {
 .hero-banner > div:first-child {
   flex: 1;
   margin-right: 20px;
-}
-
-.title {
-  max-width:1024px;
-  max-width: 50%; 
-  padding: 10px;
-
 }
 
 .header-description
@@ -138,4 +162,77 @@ nav a:hover {
   border-radius: 50%; 
 }
 
+/* WORKS*/
 
+.works 
+{
+  padding-left: 33px;
+}
+
+.work-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px; /* Optional: Limit the width of the grid */
+  width: 100%;
+  padding: 0 15px; /* Optional: Add horizontal padding to align with container */
+}
+
+
+
+.work-item {
+  background-color: var(--dark-grey);
+  box-shadow: var(--darkreader-bg--shadow);
+  padding: 1.5rem;
+  border-radius: var(--rounded-md);
+  transition: transform .2s;
+}
+
+.work-item:hover {
+  transform: translateY(-.5rem);
+}
+
+.work-item-image-wrapper {
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border-radius: var(--rounded);
+}
+
+.work-item-image {
+  width: 100%;
+  display: block;
+  transition: transform .2s;
+}
+
+.work-item-image:hover {
+  transform: scale(1.1);
+}
+
+.work-item-link {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.work-item-link:hover {
+  color: var(--blue);
+}
+
+.tech-item {
+  display: inline-block;
+  padding: .25rem .5rem;
+  border-radius: var(--rounded);
+  background-color: var(--darkreader-text--grey);
+  color: var(--blue);
+  font-size: .875rem;
+  font-weight: 500;
+  margin-right: .25rem;
+}
