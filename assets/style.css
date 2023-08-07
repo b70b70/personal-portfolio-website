@@ -7,9 +7,23 @@
     --rounded: .25rem;
     --darkreader-text--grey: #d3cfc9;
     --dark-grey: #222;
+    --button: white;
       }
 
 /* GLOBAL STYLES */
+
+.btn {
+  padding: .75rem 1.25rem;
+  border-radius: .25rem;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.btn-blue {
+  background-color: var(--blue);
+  color: var(--button);
+}
 
 .section-title {
   padding-left: 1rem;
@@ -22,7 +36,6 @@
   padding: 0 1rem;
   margin: 0 auto;
 }
-
 
 * {
   box-sizing: border-box;
@@ -176,7 +189,7 @@ nav a:hover {
 
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: 2fr 1fr; /* repeat(auto-fill, minmax(250px, 1fr)); */
   gap: 1.5rem;
   max-width: 1200px; /* Optional: Limit the width of the grid */
   width: 100%;
@@ -236,3 +249,20 @@ nav a:hover {
   font-weight: 500;
   margin-right: .25rem;
 }
+
+/* CONTACT ME*/
+
+.contact-me {
+  padding-left: 33px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.contact-wrapper {
+  text-align: center;
+}
+
+.btn-blue:hover {
+  background-color: var(--darkreader-text--grey)
+}
+
