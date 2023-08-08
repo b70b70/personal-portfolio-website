@@ -15,6 +15,6 @@ Welcome to my portfolio website repository! This is a showcase of my web develop
 
 ## How to use
 
-To view the refactored website, simply open the index.html file in your preferred web browser. You can also used the deployed link: https://b70b70.github.io/personal-portfolio-website/
+To view my portfolio web page , simply open the index.html file in your preferred web browser. You can also use the deployed link: https://b70b70.github.io/personal-portfolio-website/
 
 This portfolio effort was carried out by Faheem Ali
