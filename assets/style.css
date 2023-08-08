@@ -57,11 +57,12 @@ h3,
 h4,
 h5,
 h6,
-p,
- {
+p, {
   margin: 0;
   padding: 0;
 }
+
+ 
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul,
@@ -131,21 +132,40 @@ nav a:hover {
 /* HERO*/
 
 .hero-banner {
-    display: flex;
-    align-items: center;
-    padding: 50px;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding: 50px;
 }
 
-.hero-banner > div:first-child {
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.hero-text {
   flex: 1;
   margin-right: 20px;
+  max-width: 65%; /* Adjust this as needed */
 }
 
-.header-description
-{
-  max-width: 65%;
-  padding: 10px;
+.profile-picture-container {
+  flex-shrink: 0;
+  width: 200px;
+  align-self: flex-end; /* Align to the bottom on smaller screens */
+}
+
+.profile-picture-container img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+
+
+
+
+10px;
 }
 .github-link {
   display: inline-block;
@@ -179,7 +199,7 @@ nav a:hover {
 
 .works 
 {
-  padding-left: 33px;
+  padding-left: 50px;
 }
 
 .work-wrapper {
@@ -266,3 +286,15 @@ nav a:hover {
   background-color: var(--darkreader-text--grey)
 }
 
+@media screen and (min-width: 1280px) {
+  .container {
+      max-width: 1280px;
+  }
+}
+
+
+@media screen and (min-width: 1536px) {
+  .container {
+      max-width: 1536px;
+  }
+}
