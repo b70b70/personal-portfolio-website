@@ -84,6 +84,7 @@ picture {
   .navbar-logo img{
     width 50px;
   }
+
  nav {
     background-color: var(--darkcolour);
     padding: 1rem;
@@ -92,7 +93,7 @@ picture {
     display:
 }
 
-.navbar {
+.navbar-wrapper {
   display: flex;
   justify-content:space-between;
   align-items: center;
