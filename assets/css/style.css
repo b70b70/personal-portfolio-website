@@ -1,16 +1,110 @@
+/* CSS RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ 
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Set core root defaults */
+html,
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* CSS RESET */
+
 :root {
-    --darkcolour: #1a1c1d;
     --blue: rgb(65, 165, 247);
-    --body: #1a1a1a;
-    --rounded-md: .5rem;
-    --darkreader-bg--shadow: 0 .5rem 1rem rgba(0,0,0,.05);
-    --rounded: .25rem;
-    --darkreader-text--grey: #d3cfc9;
+    --shadow: 0 .5rem 1rem rgba(0,0,0,.05);
     --dark-grey: #222;
+
     --button: white;
+    --body: #1a1a1a;
+    --text: #fff;
+
+    --rounded: .25rem;
+    --rounded-md: .5rem;
+    
+    
       }
 
 /* GLOBAL STYLES */
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: linear-gradient(90deg, var(--body) 31px, transparent 1px), linear-gradient(180deg, var(--body) 31px, var(--blue) 1px);
+  background-size: 32px 32px;
+  color: var(--text);
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+section,
+header {
+    padding: 5rem 0;
+    scroll-margin-top: 2rem;
+}
 
 .btn {
   padding: .75rem 1.25rem;
@@ -37,98 +131,46 @@
   margin: 0 auto;
 }
 
-* {
-  box-sizing: border-box;
-}
+/* GLOBAL STYLES */
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
-  background: linear-gradient(90deg, var(--body) 31px, transparent 1px), linear-gradient(180deg, var(--body) 31px, var(--blue) 1px);
-  background-size: 32px 32px;
-  color:#FFFFFF;
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p, {
-  margin: 0;
-  padding: 0;
-}
+
+
+/* NAVBAR */
 
  
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul,
-ol {
-  list-style: none;
-}
-
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-
-/* NAV */
-
-  .navbar-logo img{
-    width 50px;
-  }
-
- nav {
-    background-color: var(--darkcolour);
-    padding: 1rem;
-    top: 0;
-    z-index: 100;
-    display:
+nav {
+  background-color: var(--dark-grey);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: box-shadow 0.2s;
 }
 
 .navbar-wrapper {
   display: flex;
-  justify-content:space-between;
   align-items: center;
-  padding: 10px 50px;
-  background-color: var(--dark-grey);
+  justify-content: space-between;
 }
 
-
+/* Styles for the menu items */
 .navbar-menu {
-  margin-bottom: 0.25rem;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Display menu items in a row */
 }
 
-.nav-bar-wrapper a{
-  align-items: right;
-  color: #FFFFFF;
+.navbar-menu-item {
   text-decoration: none;
-  transition: opacity 0.3s;
+  color: var(--white);
+  margin: 0 1rem; /* Adjust the spacing between menu items */
 }
 
-nav ul {
-  display: flex;
-  gap: 20px;
+.navbar-menu-item:hover {
+  color: var(--blue); /* Change color on hover */
 }
 
-nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: opacity 0.3s;
-}
-
-nav a:hover {
-  opacity: 0.8;
-}
 
 /* HERO*/
 
