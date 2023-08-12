@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+
 /* CSS RESET */
 
 /* Box sizing rules */
@@ -70,12 +73,16 @@ select {
   font: inherit;
 }
 
+
 /* CSS RESET */
 
 :root {
-    --blue: rgb(65, 165, 247);
+    --blue: #0D99FF;
+    --dark-blue: #0A7ACC;
+    --light-blue: #CFEBFF;
     --shadow: 0 .5rem 1rem rgba(0,0,0,.05);
     --dark-grey: #222;
+    
 
     --button: white;
     --body: #1a1a1a;
@@ -90,10 +97,10 @@ select {
 /* GLOBAL STYLES */
 
 body {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Outfit', sans-serif;
+  color: var(--text);
   background: linear-gradient(90deg, var(--body) 31px, transparent 1px), linear-gradient(180deg, var(--body) 31px, var(--blue) 1px);
   background-size: 32px 32px;
-  color: var(--text);
 }
 
 body.no-scroll {
@@ -114,10 +121,16 @@ header {
   font-weight: 500;
   white-space: nowrap;
 }
+
 .btn-blue {
   background-color: var(--blue);
   color: var(--button);
 }
+
+.btn-blue:hover {
+  background-color: var(--dark-blue);
+}
+
 
 .section-title {
   padding-left: 1rem;
@@ -174,69 +187,39 @@ nav {
 
 /* HERO*/
 
-.hero-banner {
+.header-title {
+  max-width: 1024px;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+.header-description {
+  max-width: 640px;
+  margin-bottom: 4rem;
+}
+
+.header-action {
   display: flex;
   align-items: center;
-  padding: 50px;
 }
 
-.hero-content {
+
+.header-action-link {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  margin-left: 1rem;
 }
 
-.hero-text {
-  flex: 1;
-  margin-right: 20px;
-  max-width: 65%; /* Adjust this as needed */
+.header-action-link-item {
+  text-decoration: none;
+  margin: 0 .5rem;
+  font-size: 1.25rem;
 }
 
-.profile-picture-container {
-  flex-shrink: 0;
-  width: 200px;
-  align-self: flex-end; /* Align to the bottom on smaller screens */
+.btn-blue:hover {
+  background-color: var(--dark-blue) !important;
 }
 
-.profile-picture-container img {
-  width: 100%;
-  border-radius: 50%;
-}
-
-
-
-
-
-10px;
-}
-.github-link {
-  display: inline-block;
-  margin-top: 10px;
-  vertical-align: middle;
-}
-
-.github-link img {
-  width: 30px; 
-  height: 30px;
-  margin-right: 20px;
-  vertical-align: middle;
-  filter: invert(1);
-}
-
-.github-link:hover {
-  opacity: 0.8;
-}
-
-.profile-picture-container {
-  flex-shrink: 0; 
-  width: 200px; 
-}
-
-.profile-picture-container img {
-  width: 100%;
-  border-radius: 50%; 
-}
 
 /* WORKS*/
 
